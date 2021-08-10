@@ -1,0 +1,33 @@
+.swal-modal {
+  background-color: $main-color;
+  border: 2px solid lighten($main-color, 10%);
+}
+.swal-title {
+  color: #fff;
+}
+.swal-text {
+  background-color: lighten($main-color, 10%);
+  padding: 17px;
+  border: 1px solid lighten($main-color, 30%);
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: #fff;
+}
+
+.swal-button--confirm {
+  background-color: $secondary-color;
+  border: none;
+  outline: none;
+}
+.swal-button {
+  border: none;
+  outline: none;
+}
+
+.swal-button:hover {
+  background-color: $main-color;
+}
+.swal-button--confirm:hover {
+  background-color: lighten($secondary-color, 10%);
+}

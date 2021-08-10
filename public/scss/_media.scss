@@ -1,0 +1,155 @@
+// Laptops
+@media (max-width: 1025px) {
+  .container {
+    max-width: 1000px;
+  }
+  #header-home {
+    #main-nav {
+      .nav-links {
+        li {
+          margin-left: 1.4rem;
+        }
+      }
+    }
+  }
+  #content {
+    .main-content {
+      #pagination {
+        max-width: 600px;
+      }
+    }
+  }
+}
+
+// Tablets
+@media (max-width: 769px) {
+  #header-home {
+    z-index: 100;
+    #main-nav {
+      height: 1.7rem;
+      .checkbtn {
+        position: absolute;
+        right: 0;
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+      }
+      #check {
+        display: none;
+      }
+      #check:checked ~ .nav-links {
+        left: 0;
+      }
+      .nav-links {
+        overflow-y: scroll;
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: calc(100vh - 58px);
+        background: $main-color;
+        font-size: 1.2rem;
+        top: 58px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        li {
+          margin-top: 2rem;
+          margin-left: 0;
+        }
+        .dropdown {
+          overflow-y: scroll;
+
+          .dropdown-menu {
+            background-color: lighten($main-color, 2%);
+            position: relative;
+            padding: 0;
+            margin: 0;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  #content {
+    #sidebar-content {
+      display: none;
+    }
+    .main-content {
+      width: 100%;
+      #comments {
+        .comments-form {
+          width: 100%;
+        }
+      }
+      #pagination {
+        max-width: 720px;
+      }
+      .article {
+        .article-content {
+          .article-title,
+          .article-details,
+          .article-image {
+            width: 100%;
+          }
+        }
+        .article-actions {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// Phones
+@media (max-width: 500px) {
+  #pagination {
+    .pagination-buttons {
+      a {
+        .pagination-center {
+          font-size: 0.7rem;
+        }
+      }
+      i {
+        display: none;
+      }
+    }
+  }
+  #comments {
+    .comments-form {
+      .article-avatar {
+        display: none;
+      }
+    }
+    .comments-header {
+      font-size: 0.7rem;
+      flex-direction: column;
+    }
+  }
+  #footer-main {
+    margin-top: 3rem;
+    .container {
+      ul {
+        flex-direction: column;
+        li {
+          padding: 0;
+          margin: 0.3rem;
+        }
+      }
+    }
+  }
+  #create-post {
+    .create-post-select-menu {
+      margin-top: 2rem;
+      i {
+        font-size: 5rem;
+      }
+    }
+    .create-post-picture-form,
+    .create-post-video-form {
+      width: 100%;
+      margin: 2rem 0;
+    }
+  }
+}

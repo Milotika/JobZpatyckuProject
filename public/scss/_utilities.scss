@@ -1,0 +1,99 @@
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+}
+
+.active {
+  color: $active-color;
+}
+
+@mixin input-style {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 1rem 0;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  background: #111;
+  padding: 1.5rem 3rem;
+  outline: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+@mixin submit-style {
+  float: right;
+  border: 0;
+  background-color: $special-color;
+  color: #fff;
+  padding: 0.8rem 3.5rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+@mixin small-text {
+  visibility: hidden;
+  position: absolute;
+  bottom: -25px;
+  left: 10px;
+}
+
+@mixin contact-form-btn {
+  @include submit-style;
+}
+
+@mixin contact-form-text {
+  @include input-style;
+}
+
+@mixin login-form-text {
+  @include input-style;
+}
+@mixin login-form-btn {
+  @include submit-style;
+  margin-top: 1rem;
+}
+
+@mixin register-form-text {
+  @include input-style;
+}
+
+@mixin register-form-btn {
+  @include submit-style;
+}
+
+@mixin create-post-title {
+  @include input-style;
+}
+
+@mixin create-post-select {
+  @include input-style;
+}
+
+@mixin create-post-btn {
+  @include submit-style;
+}
+
+.border-line {
+  width: 100px;
+  height: 10px;
+  background-color: $special-color;
+  margin: 2rem auto;
+}
+
+@for $i from 1 through 10 {
+  .py {
+    &-#{$i} {
+      padding: #{$i}rem 0;
+    }
+  }
+
+  .my {
+    &-#{$i} {
+      margin: #{$i}rem 0;
+    }
+  }
+}
